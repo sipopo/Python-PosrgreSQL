@@ -1,0 +1,3 @@
+# Some temporary files
+*.pyc
+__pycache__
