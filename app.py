@@ -14,8 +14,7 @@ def prompt_entry():
     entry_date = input("When do you learn it :")
     add_entry(entry_content, entry_date)
 
-def print_entries():
-    entries = get_entries()
+def print_entries(entries):
     for entry in entries:
         print(f"- - - \n{entry['date']}\n{entry['content']}\n")
 
@@ -26,7 +25,7 @@ while user_input != "3":
     if user_input == "1":
         prompt_entry()
     elif user_input == "2":
-        print_entries()
+        print_entries(get_entries())
     else:
         print("Invalid option? please try again.")  
     
