@@ -1,4 +1,8 @@
+import sqlite3
+
 entries = []
+
+connect = sqlite3.connect('data.db')
 
 
 def add_entry(entry_content, entry_date):

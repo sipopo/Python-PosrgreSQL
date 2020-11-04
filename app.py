@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from database import add_entry, get_entries
 
 menu = """ Please select one of following options:
