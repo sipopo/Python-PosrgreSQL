@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from database import add_entry, get_entries
+from database import create_table, add_entry, get_entries
 
 menu = """ Please select one of following options:
 1) Add new entry for today.
@@ -22,6 +22,7 @@ def print_entries(entries):
 
 print(welcome)
 
+create_table()
 user_input = input(menu)
 while user_input != "3":
     if user_input == "1":
