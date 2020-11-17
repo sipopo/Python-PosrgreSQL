@@ -1,36 +1,30 @@
-#!/usr/bin/env python3
+import database
 
-from database import create_table, add_entry, get_entries
-
-menu = """ Please select one of following options:
-1) Add new entry for today.
-2) View entries.
-3) Exit.
+menu = """Please select one of the following options:
+1) Add new movie.
+2) View upcoming movies.
+3) View all movies
+4) Watch a movie
+5) View watched movies.
+6) Exit.
 
 Your selection: """
+welcome = "Welcome to the watchlist app!"
 
-welcome = "Welcome to programming dairy!"
-
-def prompt_entry():
-    entry_content = input("What do you learn :")
-    entry_date = input("When do you learn it :")
-    add_entry(entry_content, entry_date)
-
-def print_entries(entries):
-    for entry in entries:
-        print(f"- - - \n{entry['date']}\n{entry['content']}\n")
 
 print(welcome)
+database.create_tables()
 
-create_table()
-user_input = input(menu)
-while user_input != "3":
+while (user_input := input(menu)) != "6":
     if user_input == "1":
-        prompt_entry()
+        pass
     elif user_input == "2":
-        print_entries(get_entries())
+        pass
+    elif user_input == "3":
+        pass
+    elif user_input == "4":
+        pass
+    elif user_input == "5":
+        pass
     else:
-        print("Invalid option? please try again.")  
-    
-    user_input = input(menu)  
-
+        print("Invalid input, please try again!")
