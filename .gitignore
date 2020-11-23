@@ -2,4 +2,6 @@
 *.pyc
 __pycache__
 *.code-workspace
+.venv/
+.vscode/
 data.db
