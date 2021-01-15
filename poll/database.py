@@ -69,7 +69,7 @@ def get_poll_and_vote_results(connection, poll_id):
     with connection:
         with connection.cursor() as cursor:
             cursor.execute(SELECT_POLL_VOTE_DETAILS, (poll_id,))
-            return.fetchall()
+            return cursor.fetchall()
 
 
 def get_random_poll_vote(connection, option_id):
